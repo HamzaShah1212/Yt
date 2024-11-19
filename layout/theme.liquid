@@ -1,0 +1,17 @@
+<html>
+    <head>
+        {{content_for_header}}
+    </head>
+    <body>
+        {{ 'application.css' | asset_url | stylesheet_tag }}
+        {% comment %} {{ 'application.js' | asset_url | script_tag }} {% endcomment %}
+       
+    {% section 'annoicementbar' %}
+
+      <h2>sdas</h2> 
+
+        <main id="main" role="main">
+            {{content_for_layout}}
+        </main>
+    </body>
+</html>

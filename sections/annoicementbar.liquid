@@ -1,0 +1,50 @@
+<section class="announcement-bar">
+    <div class="announcement-bar__content">
+        {{ section.settings.announcement_text }}
+    </div>
+</section>
+
+<style>
+    .announcement-bar {
+        background-color: {{ section.settings.background_color }};
+        color: {{ section.settings.text_color }};
+        padding: 10px;
+        text-align: center;
+    }
+    .announcement-bar__content {
+        font-size: 16px;
+        font-weight: bold;
+    }
+</style>
+
+{% schema %}
+{
+    "name": "Announcement Bar",
+    "settings": [
+        {
+            "type": "text",
+            "id": "announcement_text",
+            "label": "Announcement Text",
+            "default": "Free shipping on all orders over $50!"
+        },
+        {
+            "type": "color",
+            "id": "background_color",
+            "label": "Background Color",
+            "default": "#000000"
+        },
+        {
+            "type": "color",
+            "id": "text_color",
+            "label": "Text Color",
+            "default": "#ffffff"
+        }
+    ],
+    "presets": [
+        {
+            "name": "Default",
+            "category": "Announcement"
+        }
+    ]
+}
+{% endschema %}
